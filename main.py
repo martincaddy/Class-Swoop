@@ -3,12 +3,22 @@ import random
 
 #import class list of names from a csv file
 #user selection of number of names and run in loop
-swoop = int(input("Which list do you want to use 1 for full 2 for short "))
+swoop = int(input("Which list do you want to use \n1 Full Class \n2 Year 4 \n3 Year 5 \n4 Target \n \n"))
 
 if swoop == 1:
   with open('clss.csv', newline='') as f:
       reader = csv.reader(f)
       stc = list(reader)
+    
+elif swoop == 2:
+  with open('Year4.csv', newline='') as f:
+      reader = csv.reader(f)
+      stc = list(reader)
+elif swoop == 3:
+  with open('Year5.csv', newline='') as f:
+      reader = csv.reader(f)
+      stc = list(reader)
+    
 else:
   with open('clss2.csv', newline='') as f:
       reader = csv.reader(f)
