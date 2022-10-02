@@ -1,5 +1,7 @@
 import csv
 import random
+import time
+import os
 
 #import class list of names from a csv file
 #user selection of number of names and run in loop
@@ -25,12 +27,16 @@ else:
       stc = list(reader)
   
 chosen = int(input("How many names do you want to choose: "))
-#chosen = 1
+#chosen == 1
 while chosen != 0 :
   #print(data)
   sampled_stc = random.sample(stc, chosen)
   print(sampled_stc)
+  time.sleep(10)
+  os.system('clear')
   #print(random.choice(stc))
   chosen = int(input("How many names do you want to choose: "))
   if chosen == 0:
     print("Thanks bye!")
+
+  
